@@ -19,11 +19,12 @@ public class FileSeek : MonoBehaviour {
 		//path = EditorUitility.OpenFilePanel("Overwrite wtih mp3", "", "mp3");
 		string[] filetypes = {"MP3", "mp3", "WAV", "wav", "OGG", "ogg"};
 		path = EditorUtility.OpenFilePanelWithFilters("choose a song", "", filetypes);
+		//print ("path = \"" + path + "\"");
 		GetMp3 ();
 	}
 
 	void GetMp3(){
-		if (path != null) {
+		if (path != null && path != "") {
 			aud.Pause ();
 			UpdateMp3 ();
 		}

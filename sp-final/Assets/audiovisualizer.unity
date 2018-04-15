@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03921513, g: 0.07055653, b: 0.16857913, a: 1}
+  m_IndirectSpecularColor: {r: 0.0313721, g: 0.07843045, b: 0.1489256, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -7236,7 +7236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &973974749
 Transform:
   m_ObjectHideFlags: 0
@@ -7268,7 +7268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &989219818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7396,7 +7396,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 979206476
+  randomSeed: -1043335581
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10933,7 +10933,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2010592244}
+      - m_Target: {fileID: 2010592241}
         m_MethodName: OpenExplorer
         m_Mode: 1
         m_Arguments:
@@ -11093,7 +11093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1508293447
 Transform:
   m_ObjectHideFlags: 0
@@ -11240,8 +11240,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2010592243}
   - component: {fileID: 2010592242}
-  - component: {fileID: 2010592241}
   - component: {fileID: 2010592244}
+  - component: {fileID: 2010592241}
   m_Layer: 0
   m_Name: audio
   m_TagString: Untagged
@@ -11257,7 +11257,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2010592240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e67164969ce724a4f96036ff22304793, type: 3}
+  m_Script: {fileID: 11500000, guid: 702d3da3e454494448dd2d8ca2208049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &2010592242
@@ -11361,7 +11361,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2010592240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 702d3da3e454494448dd2d8ca2208049, type: 3}
+  m_Script: {fileID: 11500000, guid: e67164969ce724a4f96036ff22304793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2134487547
