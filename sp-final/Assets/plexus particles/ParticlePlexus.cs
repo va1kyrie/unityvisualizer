@@ -5,11 +5,12 @@ using UnityEngine;
 public class ParticlePlexus : MonoBehaviour {
 
 	public float maxDistance = 1.0f;
+	public static float maxDext; //for the visualizer
 	public int maxConnections = 4;
 	public int maxLr = 100;
 
 
-	new ParticleSystem ps;
+	ParticleSystem ps;
 	ParticleSystem.Particle[] particles;
 
 	ParticleSystem.MainModule mainMod;
@@ -24,6 +25,8 @@ public class ParticlePlexus : MonoBehaviour {
 		ps = GetComponent<ParticleSystem> ();
 		mainMod = ps.main;
 		trans = transform;
+		//modifications for audio visualization
+		maxDext = maxDistance;
 	}
 	
 	// Update is called once per frame
