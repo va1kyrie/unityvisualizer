@@ -24,6 +24,7 @@ public class Bars : MonoBehaviour {
 	void Update () {
 		for (int i = 0; i < 512; i++) {
 			if (thecubes != null) {
+				print ("sample = " + Visualizer.samples [i]);
 				thecubes [i].transform.localScale = new Vector3 (10, Visualizer.samples [i] * scale + 2, 10);
 			}
 		}

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - verts
   - edge
+  - nowplaying
+  - possible
   layers:
   - Default
   - TransparentFX

@@ -15,12 +15,12 @@ public class BallsAud : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 orig;
+		Vector3 orig, nv;
 		//Vector3 norm;
 		for (int i = 0; i < verts.Length; i++) {
 			orig = verts [i].transform.position;
-			orig += new Vector3(Visualizer.samples [i] * scale, Visualizer.samples [i] * scale, Visualizer.samples [i] * scale);
-			verts[i].transform.position += orig.normalized;
+			nv = orig + new Vector3(0, Visualizer.samples [i] * scale, Visualizer.samples [i] * scale);
+			verts[i].transform.position += nv.normalized;
 		}
 	}
 }

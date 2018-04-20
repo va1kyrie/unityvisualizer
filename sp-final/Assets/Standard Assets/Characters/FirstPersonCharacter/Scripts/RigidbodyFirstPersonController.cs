@@ -6,8 +6,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 {
     [RequireComponent(typeof (Rigidbody))]
     [RequireComponent(typeof (CapsuleCollider))]
-    public class RigidbodyFirstPersonController : MonoBehaviour
+    public class RigidbodyFirstPersonController : MonoBehaviour 
     {
+
+		public void MouseSwitch(bool stch){
+			mouseLook.lockCursor = stch;
+		}
         [Serializable]
         public class MovementSettings
         {

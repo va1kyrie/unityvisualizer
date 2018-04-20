@@ -29,7 +29,14 @@ public class ParticleAudio : MonoBehaviour {
 		for (int i = 0; i < pCount; i++) {
 			Vector3 pos = particles [i].position;
 			pos.y += Visualizer.samples [i] * scale + 2;
+			//print ("pos " + i + "= " + pos);
 			particles [i].position = pos;
+
+			/*
+			Color32 col = particles [i].GetCurrentColor (ps);
+			col.b += (byte) ((Visualizer.samples [i] * scale + 2) / 255);
+			particles [i].color = col;
+			*/
 
 			/*if (particles != null) {
 				for (int j = 0; j < 512; j++) {
@@ -42,6 +49,8 @@ public class ParticleAudio : MonoBehaviour {
 
 			}*/
 		}
+
+		ps.SetParticles (particles, particles.Length);
 		
 	}
 }

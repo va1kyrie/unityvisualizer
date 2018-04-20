@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a3e16ed9983a23f40a9183ed07cba7e8
+timeCreated: 1524190256
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: MADE Evolve Sans EVO
+  fontNames:
+  - MADE Evolve Sans EVO
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3ed70623d240ec744b9d9df8e2513c9d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
