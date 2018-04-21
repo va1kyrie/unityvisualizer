@@ -26,7 +26,7 @@ public class Atmo : MonoBehaviour {
 
 		for (int i = 0; i < pCount; i++) {
 			Color c = particles[i].color;
-			c.a = Mathf.Sin(Visualizer.samples[i] * scale);
+			c.a = Mathf.Sin(AudioSampler.spectrum[i] * scale);
 			particles [i].color = c;
 	}
 

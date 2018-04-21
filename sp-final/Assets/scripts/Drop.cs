@@ -15,13 +15,18 @@ public class Drop : MonoBehaviour {
 	//MouseLook[] mice;
 
 	public UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController cam;
-
-	void Start(){
+	public UnityStandardAssets.Characters.FirstPerson.FirstPersonController cha;
+	public void Start(){
 		songCount = songs.transform.childCount;
 		players = new GameObject[songCount];
 		current = GameObject.FindGameObjectWithTag ("nowplaying");
 		drop = GetComponent<Dropdown> ();
+		onEnable ();
+	}
 
+	void onEnable(){
+		print ("enabled");
+		cha.MouseSwitch (false);
 		drop.ClearOptions ();
 		List<string> ops = new List<string> ();
 		ops.Add ("CHOOSE A SONG");
@@ -34,16 +39,6 @@ public class Drop : MonoBehaviour {
 
 		drop.AddOptions (ops);
 	}
-
-	/*
-	void Update(){
-		if (drop.IsActive ()) {
-			foreach (var mouseLook in mice) {
-				mouseLook.enabled = false;
-			}
-		}
-	}
-	*/
 
 
 	public void ChangeSong(){
@@ -66,10 +61,12 @@ public class Drop : MonoBehaviour {
 			//aud.Play ();
 		}
 		//character.SetActive (true);
-		cam.MouseSwitch(true);
-		string cap = drop.captionText.text;
-		cap = cap.ToUpper ();
-		drop.captionText.text = cap;
+		//cam.MouseSwitch(true);
+		cha.MouseSwitch(true);
+		//string cap = drop.captionText.text;
+		//cap = cap.ToUpper ();
+		//drop.captionText.text = cap;
+		drop.RefreshShownValue();
 		drop.gameObject.SetActive (false);
 	}
 }
