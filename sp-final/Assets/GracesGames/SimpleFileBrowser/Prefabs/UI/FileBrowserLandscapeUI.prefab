@@ -1732,7 +1732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0945a33227a647fa9848fa8aecc3ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UserInterfaceScale: 0.5
+  UserInterfaceScale: 1
   DirectoryButtonPrefab: {fileID: 1781446219088990, guid: c50a28e362f5046f1b365259e51af4c5,
     type: 2}
   FileButtonPrefab: {fileID: 1781446219088990, guid: c8143dc148b024025a875a3c83a9d60f,
@@ -1742,8 +1742,8 @@ MonoBehaviour:
   ItemButtonHeight: 120
   ItemFontSize: 32
   PanelTextFontSize: 24
-  DirectoryPanelColor: {r: 0.0627451, g: 0.45882353, b: 0.47843137, a: 0.734}
-  FilePanelColor: {r: 0.3595372, g: 0.6704749, b: 0.6985294, a: 0.747}
+  DirectoryPanelColor: {r: 0.037467565, g: 0.18321575, b: 0.24264705, a: 0.734}
+  FilePanelColor: {r: 0.060337376, g: 0.3904128, b: 0.45588237, a: 0.747}
   ItemFontColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114860607157966350
 MonoBehaviour:
@@ -2507,7 +2507,7 @@ RectTransform:
   m_GameObject: {fileID: 1183516625028436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 224126121003114276}
   m_Father: {fileID: 0}

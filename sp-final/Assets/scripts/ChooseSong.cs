@@ -25,7 +25,8 @@ public class ChooseSong : MonoBehaviour {
 
 
 		#if UNITY_ANDROID
-		Permission perm = FileBrowser.CheckPermission ();
+		//Permission perm = FileBrowser.CheckPermission ();
+
 //		if(perm == Permission.Granted){
 //			FileBrowser.SetFilters (true, new FileBrowser.Filter ("Audio", ".wav", ".ogg", ".mp3"));
 //		}else{
@@ -83,12 +84,14 @@ public class ChooseSong : MonoBehaviour {
 	}
 
 	IEnumerator LoadSong(){
+		WWW www;
+
 		#if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
-		WWW www = new WWW("file:///" + pathtosong);
+		www = new WWW("file:///" + pathtosong);
 		#endif
 
 		#if UNITY_ANDROID
-		WWW www = new WWW("file://" + pathtosong);
+		www = new WWW("file://" + pathtosong);
 		#endif
 
 		yield return www;

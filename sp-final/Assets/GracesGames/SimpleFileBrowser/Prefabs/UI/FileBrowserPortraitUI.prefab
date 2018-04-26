@@ -946,8 +946,8 @@ MonoBehaviour:
   ItemButtonHeight: 120
   ItemFontSize: 32
   PanelTextFontSize: 24
-  DirectoryPanelColor: {r: 0.0627451, g: 0.45882353, b: 0.47843137, a: 0.748}
-  FilePanelColor: {r: 0.36078432, g: 0.67058825, b: 0.69803923, a: 0.74509805}
+  DirectoryPanelColor: {r: 0.039215688, g: 0.18431373, b: 0.24313726, a: 0.73333335}
+  FilePanelColor: {r: 0.05882353, g: 0.39215687, b: 0.45490196, a: 0.74509805}
   ItemFontColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114377232483168896
 MonoBehaviour:
@@ -1786,7 +1786,7 @@ RectTransform:
   m_GameObject: {fileID: 1110909879947270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 224479232907129500}
   m_Father: {fileID: 0}

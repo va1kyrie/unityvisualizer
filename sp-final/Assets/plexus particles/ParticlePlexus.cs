@@ -104,13 +104,21 @@ public class ParticlePlexus : MonoBehaviour
 				particles [i].position = pos;
 			}
 
-			Color c = particles[i].color;
-			c.a = Mathf.Sin(sum * scale);
+			//Color c = particles[i].color;
+			//c.a = Mathf.Sin(sum * scale);
 			//particles [i].color = c;
 
 			Color32 col = particles [i].GetCurrentColor (ps);
-			col.b += (byte) ((sum * scale + 2) / 255);
+			//col.r *= (byte)(AudioSampler.pitchvalue * scale / 255);
+			col.g += (byte)(AudioSampler.pitchvalue * scale / 255);
+			col.b += (byte)(AudioSampler.pitchvalue * scale / 255);
+			//col.a *= (byte) (AudioSampler.pitchvalue / 255);
+			//Color32 col = particles[i].startColor;
+			//col.b += (byte) ((sum * scale + 2) / 255);
+			//col.g *= (byte)((sum * scale + 2) / 255);
+			//col.r *= (byte)((sum * scale + 2) / 255);
 			particles [i].color = col;
+			//particles [i].startColor = col;
 
 
 

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AudioSampler : MonoBehaviour {
 
-	public float rmsvalue; //avg power output of sound
-	public float dbvalue; //db
-	public float pitchvalue; //pitch
+	public static float rmsvalue; //avg power output of sound
+	public static float dbvalue; //db
+	public static float pitchvalue; //pitch
 
 	private AudioSource source;
 	public static float[] samples;
