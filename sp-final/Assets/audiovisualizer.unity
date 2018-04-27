@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03921513, g: 0.07055653, b: 0.16857913, a: 1}
+  m_IndirectSpecularColor: {r: 0.0313721, g: 0.07843045, b: 0.1489256, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -15949,13 +15949,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b5e734d07b47b24889ead93d87ee5de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 4
+  maxDistance: 5
   maxConnections: 3
-  maxLr: 250
-  scale: 1000
-  maxMag: 7
-  numSamples: 512
-  smooth: 2
+  maxLr: 75
+  scale: 400
+  maxMag: 7.5
+  numSamples: 200
+  smooth: 0.25
   lrendtemp: {fileID: 120422881133654988, guid: dfc0959a9acc7da40b7439b039633fce,
     type: 2}
 --- !u!199 &989219819
@@ -16069,14 +16069,14 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -975263774
+  randomSeed: -1789803215
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -16117,7 +16117,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: -1
       minScalar: 3.4
       maxCurve:
         serializedVersion: 2
@@ -16471,7 +16471,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.18
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -16512,7 +16512,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 5
     enabled: 1
-    type: 2
+    type: 0
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -16530,12 +16530,12 @@ ParticleSystem:
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
-    randomDirectionAmount: 0.5
-    sphericalDirectionAmount: 0
+    randomDirectionAmount: 0.33
+    sphericalDirectionAmount: 0.31
     randomPositionAmount: 0
     radius:
-      value: 0.99
-      mode: 2
+      value: 1
+      mode: 0
       spread: 0
       speed:
         serializedVersion: 2
@@ -18333,7 +18333,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 3
     type: 0
     collisionMode: 0
@@ -19279,7 +19279,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 989219817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.98, z: 0}
+  m_LocalPosition: {x: -1.01, y: 1.17, z: 1.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1741539173}
@@ -20064,7 +20064,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b4ae91f33541fe34ba5196cbe111723c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b1d5442c832d66f429805b7ae3303bc3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -21189,7 +21189,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1613791395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.25, z: 0}
+  m_LocalPosition: {x: 0, y: -2.14, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 989219821}
@@ -21550,7 +21550,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1566850052
+  randomSeed: 1245927521
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -24977,7 +24977,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1741539173
 Transform:
   m_ObjectHideFlags: 0
@@ -24985,7 +24985,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1741539172}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 989219821}
@@ -25087,7 +25087,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1771223965}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba59b3752cfeeb64f9f5c9d3e054f598, type: 3}
   m_Name: 
@@ -25098,7 +25098,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1771223965}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f286803b19a527844b704a4589610491, type: 3}
   m_Name: 

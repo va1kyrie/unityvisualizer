@@ -6,7 +6,6 @@ public class ParticlePlexus : MonoBehaviour
 {
 
 	public float maxDistance = 1.0f;
-	public static float maxDext;
 	//for the visualizer
 	public int maxConnections = 4;
 	public int maxLr = 100;
@@ -36,9 +35,8 @@ public class ParticlePlexus : MonoBehaviour
 		emit = ps.emission;
 		trans = transform;
 		//modifications for audio visualization
-		maxDext = maxDistance;
-		origin = ps.transform.localPosition;
-		print ("origin = " + origin);
+		origin = ps.transform.position;
+		mainMod.maxParticles = numSamples;
 	}
 	
 	// Update is called once per frame
@@ -76,7 +74,33 @@ public class ParticlePlexus : MonoBehaviour
 			//pos *= (AudioSampler.spectrum [i] * scale + 2);
 			//pos.x -= Time.deltaTime * smooth;
 			//pos.y -= Time.deltaTime * smooth;
-			pos -= new Vector3(0, Time.deltaTime * smooth, 0);
+			//pos -= new Vector3(0f, Time.deltaTime * smooth, 0f);
+			/*
+			float timepos = (Time.deltaTime * smooth) * (pos.magnitude- Mathf.Max(1f, pos.magnitude/2));
+
+			if (pos.y < 0) {
+				pos += new Vector3 (0f, timepos, 0f);
+			} else if (pos.y > 0) {
+				pos -= new Vector3 (0f, timepos, 0f);
+			}
+
+			if (pos.x < 0) {
+				pos += new Vector3 (timepos, 0f, 0f);
+			} else if(pos.x > 0) {
+				pos -= new Vector3 (timepos, 0f, 0f);
+			}
+			if (pos.z < 0) {
+				pos += new Vector3 (0f, 0f, timepos);
+			} else if (pos.z > 0) {
+				pos -= new Vector3 (0f, 0f, timepos);
+			}
+			*/
+			/*
+			if (pos.x < 0 && pos.z < 0) {
+				pos.x = 0f;
+				pos.z = 0f;
+			}
+			*/
 			//pos = new Vector3(sum / avgsize * scale, sum / avgsize * scale, sum / avgsize * scale);
 			//print("sum = " + sum);
 			Vector3 newpos = pos * ((sum / avgsize) * scale);

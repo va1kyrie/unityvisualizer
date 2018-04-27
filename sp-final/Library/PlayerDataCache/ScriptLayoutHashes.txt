@@ -1,4 +1,4 @@
-Android
+WindowsStandalone
 395647ef1d237b79a69128944df645ad Assembly-CSharp.dll:GracesGames.SimpleFileBrowser.Scripts.UI.PortraitUserInterface
 5352020de4ccc04626abdf18d2e41801 Assembly-CSharp.dll:.BarAudio
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AudioSampler
