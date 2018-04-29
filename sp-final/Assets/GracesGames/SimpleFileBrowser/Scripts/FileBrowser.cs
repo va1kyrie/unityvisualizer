@@ -375,7 +375,7 @@ namespace GracesGames.SimpleFileBrowser.Scripts {
 			if (_mode == FileBrowserMode.Save) {
 				string clickedFileName = Path.GetFileNameWithoutExtension(clickedFile);
 				CheckValidFileName(clickedFileName);
-				//_uiScript.SetFileNameInputField(clickedFileName, _fileExtensions[0]);
+				_uiScript.SetFileNameInputField(clickedFileName, _fileExtensions[0]);
 			} else {
 				_currentFile = clickedFile;
 			}
@@ -393,7 +393,7 @@ namespace GracesGames.SimpleFileBrowser.Scripts {
 			}
 
 			_mode = FileBrowserMode.Save;
-			//_uiScript.SetSaveMode(defaultName, fileExtensions[0]);
+			_uiScript.SetSaveMode(defaultName, fileExtensions[0]);
 			FilePanel(fileExtensions);
 		}
 
@@ -406,7 +406,7 @@ namespace GracesGames.SimpleFileBrowser.Scripts {
 			}
 
 			_mode = FileBrowserMode.Load;
-			//_uiScript.SetLoadMode();
+			_uiScript.SetLoadMode();
 			FilePanel(fileExtensions);
 		}
 

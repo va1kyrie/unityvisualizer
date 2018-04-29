@@ -70,13 +70,14 @@ public class ParticlePlexus : MonoBehaviour
 			}
 			
 			Vector3 pos = particles[i].position;
+			Vector3 newpos = pos * ((sum / avgsize) * scale);
 			//pos *= Mathf.Sin(Visualizer.samples [i] / scale + 2);
 			//pos *= (AudioSampler.spectrum [i] * scale + 2);
 			//pos.x -= Time.deltaTime * smooth;
 			//pos.y -= Time.deltaTime * smooth;
 			//pos -= new Vector3(0f, Time.deltaTime * smooth, 0f);
-			/*
-			float timepos = (Time.deltaTime * smooth) * (pos.magnitude- Mathf.Max(1f, pos.magnitude/2));
+
+			float timepos = (Time.deltaTime * smooth) * (pos.magnitude * smooth);
 
 			if (pos.y < 0) {
 				pos += new Vector3 (0f, timepos, 0f);
@@ -94,7 +95,7 @@ public class ParticlePlexus : MonoBehaviour
 			} else if (pos.z > 0) {
 				pos -= new Vector3 (0f, 0f, timepos);
 			}
-			*/
+
 			/*
 			if (pos.x < 0 && pos.z < 0) {
 				pos.x = 0f;
@@ -103,7 +104,7 @@ public class ParticlePlexus : MonoBehaviour
 			*/
 			//pos = new Vector3(sum / avgsize * scale, sum / avgsize * scale, sum / avgsize * scale);
 			//print("sum = " + sum);
-			Vector3 newpos = pos * ((sum / avgsize) * scale);
+
 			//print("pos = " + pos);
 			if (pos.magnitude < newpos.magnitude) {
 				pos = newpos;
@@ -134,11 +135,11 @@ public class ParticlePlexus : MonoBehaviour
 
 			Color32 col = particles [i].GetCurrentColor (ps);
 			//col.r *= (byte)(AudioSampler.pitchvalue * scale / 255);
-			col.g += (byte)(AudioSampler.pitchvalue * scale / 255);
-			col.b += (byte)(AudioSampler.pitchvalue * scale / 255);
+			//col.g += (byte)(AudioSampler.pitchvalue * scale / 255);
+			//col.b += (byte)(AudioSampler.pitchvalue * scale / 255);
 			//col.a *= (byte) (AudioSampler.pitchvalue / 255);
 			//Color32 col = particles[i].startColor;
-			//col.b += (byte) ((sum * scale + 2) / 255);
+			col.b += (byte) ((sum * scale + 2) / 255);
 			//col.g *= (byte)((sum * scale + 2) / 255);
 			//col.r *= (byte)((sum * scale + 2) / 255);
 			particles [i].color = col;

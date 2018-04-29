@@ -25,9 +25,13 @@ public class Atmo : MonoBehaviour {
 		ps.GetParticles (particles);
 
 		for (int i = 0; i < pCount; i++) {
-			Color c = particles[i].color;
-			c.a = Mathf.Sin(AudioSampler.spectrum[i] * scale);
-			particles [i].color = c;
+			Color col = particles[i].color;
+			col.a = Mathf.Sin(AudioSampler.spectrum[i] * scale)/60;
+			//col.r += (byte)(AudioSampler.pitchvalue * scale / 255);
+			//col.g += (byte)(AudioSampler.pitchvalue * scale / 255);
+			//col.b += (byte)(AudioSampler.pitchvalue * scale / 255);
+			//col.a *= (byte) (AudioSampler.pitchvalue / 255);
+			particles [i].color = col;
 	}
 
 	ps.SetParticles (particles, particles.Length);

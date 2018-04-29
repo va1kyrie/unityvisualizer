@@ -23,7 +23,7 @@ public class Gyroscope: MonoBehaviour {
 		camContainer.tag = "Player";
 		camContainer.transform.position = transform.position;
 		transform.SetParent(camContainer.transform);
-		camContainer.transform.rotation = Quaternion.Euler(90f, 90f, 0f);
+		camContainer.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
 		rot = new Quaternion(0, 0, 1, 0);
 	}
 		

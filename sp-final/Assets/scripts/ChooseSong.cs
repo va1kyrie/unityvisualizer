@@ -11,6 +11,7 @@ public class ChooseSong : MonoBehaviour {
 	string pathtosong = "";
 	public string[] extensions;
 	bool landscape = true;
+	public GameObject button;
 
 	AudioSource aud;
 	public UnityStandardAssets.Characters.FirstPerson.FirstPersonController cha;
@@ -61,6 +62,7 @@ public class ChooseSong : MonoBehaviour {
 	void NoChange(){
 		aud.Play ();
 		cha.MouseSwitch (true);
+		button.SetActive (true);
 	}
 
 	void PickSong(string path){
@@ -74,6 +76,7 @@ public class ChooseSong : MonoBehaviour {
 		} else {
 			aud.Play ();
 			cha.MouseSwitch (true);
+			button.SetActive (true);
 		}
 			
 	}
@@ -103,6 +106,7 @@ public class ChooseSong : MonoBehaviour {
 		aud.Play ();
 		print ("done!");
 		cha.MouseSwitch (true);
+		button.SetActive (true);
 
 	}
 }
